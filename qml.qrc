@@ -5,6 +5,6 @@
         <file>qtquickcontrols2.conf</file>
         <file>PageLocalCompare.ui.qml</file>
         <file>PageNetworkSearch.ui.qml</file>
-        <file>PageForgiveMe.ui.qml</file>
+        <file>PageVisualSearch.ui.qml</file>
     </qresource>
 </RCC>

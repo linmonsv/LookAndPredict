@@ -55,10 +55,10 @@ ApplicationWindow {
                 }
             }
             ItemDelegate {
-                text: qsTr("Forgive Me")
+                text: qsTr("Visual Search")
                 width: parent.width
                 onClicked: {
-                    stackView.push("PageForgiveMe.ui.qml")
+                    stackView.push("PageVisualSearch.ui.qml")
                     drawer.close()
                 }
             }

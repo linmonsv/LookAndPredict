@@ -1,14 +1,72 @@
 import QtQuick 2.12
-import QtQuick.Controls 2.5
+import QtQuick.Controls 2.12
+import QtQuick.Layouts 1.12
 
 Page {
     width: 600
     height: 400
 
-    title: qsTr("Page 1")
+    title: qsTr("Local Compare")
 
-    Label {
-        text: qsTr("You are on Page 1.")
-        anchors.centerIn: parent
+    GridLayout {
+        anchors.top: parent.top
+        anchors.topMargin: 4
+        anchors.left: parent.left
+        anchors.leftMargin: 4
+        rows: 4
+        columns: 2
+        rowSpacing: 4
+        columnSpacing: 4
+        flow: GridLayout.LeftToRight
+
+        Rectangle {
+            width: 300;
+            height: 200;
+            border.width: 2;
+            border.color: "green"
+            Image {
+                id: img_source
+                source: "source.png"
+            }
+        }
+        Rectangle {
+            width: 300;
+            height: 200;
+            border.width: 2;
+            border.color: "red"
+            Image {
+                id: img_target
+                source: "target.png"
+            }
+        }
+        Text {
+            id: txt_source
+            text: qsTr("Choose your Photo")
+        }
+        Text {
+            id: txt_target
+            text: qsTr("Choose her Photo")
+        }
+        Button {
+            id: btn_compare
+            text: qsTr("Begin Compare")
+            Layout.columnSpan: 2
+            Layout.fillWidth: true;
+            onClicked: {
+                console.log("Begin compare ...")
+            }
+        }
+        Rectangle {
+            Layout.columnSpan: 2
+            Layout.fillWidth: true;
+            height: 20;
+            border.width: 2;
+            border.color: "black"
+            TextEdit {
+                id: resultView;
+                wrapMode: TextEdit.WordWrap;
+                text: "Face similarity : ..."
+            }
+        }
     }
 }
