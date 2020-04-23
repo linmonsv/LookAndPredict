@@ -20,9 +20,9 @@ Page {
         flow: GridLayout.LeftToRight
 
         Rectangle {
-            width: 300;
-            height: 200;
-            border.width: 2;
+            width: 300
+            height: 200
+            border.width: 2
             border.color: "green"
             Image {
                 id: img_source
@@ -30,41 +30,45 @@ Page {
             }
         }
         Rectangle {
-            width: 300;
-            height: 200;
-            border.width: 2;
+            width: 300
+            height: 200
+            border.width: 2
             border.color: "red"
             Image {
                 id: img_target
                 source: "target.png"
             }
         }
-        Text {
-            id: txt_source
+        Button {
+            id: btn_source
             text: qsTr("Choose your Photo")
+            Layout.columnSpan: 1
+            Layout.fillWidth: true
         }
-        Text {
-            id: txt_target
+        Button {
+            id: btn_target
             text: qsTr("Choose her Photo")
+            Layout.columnSpan: 1
+            Layout.fillWidth: true
         }
         Button {
             id: btn_compare
             text: qsTr("Begin Compare")
             Layout.columnSpan: 2
-            Layout.fillWidth: true;
+            Layout.fillWidth: true
             onClicked: {
                 console.log("Begin compare ...")
             }
         }
         Rectangle {
             Layout.columnSpan: 2
-            Layout.fillWidth: true;
-            height: 20;
-            border.width: 2;
+            Layout.fillWidth: true
+            height: 20
+            border.width: 2
             border.color: "black"
             TextEdit {
-                id: resultView;
-                wrapMode: TextEdit.WordWrap;
+                id: resultView
+                wrapMode: TextEdit.WordWrap
                 text: "Face similarity : ..."
             }
         }
