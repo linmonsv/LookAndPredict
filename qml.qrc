@@ -3,8 +3,10 @@
         <file>main.qml</file>
         <file>HomeForm.ui.qml</file>
         <file>qtquickcontrols2.conf</file>
-        <file>PageLocalCompare.ui.qml</file>
-        <file>PageNetworkSearch.ui.qml</file>
-        <file>PageVisualSearch.ui.qml</file>
+        <file>LocalCompare.qml</file>
+        <file>NetworkSearch.qml</file>
+        <file>VisualSearch.qml</file>
+        <file>source.jpg</file>
+        <file>target.jpg</file>
     </qresource>
 </RCC>

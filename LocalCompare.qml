@@ -26,6 +26,11 @@ Page {
             border.color: "green"
             Image {
                 id: img_source
+                anchors.centerIn: parent
+                width: parent.width - 4
+                height: parent.height - 4
+                fillMode: Image.PreserveAspectFit
+                source: "source.jpg"
             }
         }
         Rectangle {
@@ -35,6 +40,11 @@ Page {
             border.color: "red"
             Image {
                 id: img_target
+                anchors.centerIn: parent
+                width: parent.width - 4
+                height: parent.height - 4
+                fillMode: Image.PreserveAspectFit
+                source: "target.jpg"
             }
         }
         Button {

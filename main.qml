@@ -42,7 +42,7 @@ ApplicationWindow {
                 text: qsTr("Local Compare")
                 width: parent.width
                 onClicked: {
-                    stackView.push("PageLocalCompare.ui.qml")
+                    stackView.push("LocalCompare.qml")
                     drawer.close()
                 }
             }
@@ -50,7 +50,7 @@ ApplicationWindow {
                 text: qsTr("Network Search")
                 width: parent.width
                 onClicked: {
-                    stackView.push("PageNetworkSearch.ui.qml")
+                    stackView.push("NetworkSearch.qml")
                     drawer.close()
                 }
             }
@@ -58,7 +58,7 @@ ApplicationWindow {
                 text: qsTr("Visual Search")
                 width: parent.width
                 onClicked: {
-                    stackView.push("PageVisualSearch.ui.qml")
+                    stackView.push("VisualSearch.qml")
                     drawer.close()
                 }
             }
