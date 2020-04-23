@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.12
 import QtQuick.Layouts 1.12
+import QtQuick.Dialogs 1.2
 
 Page {
     width: 600
@@ -52,12 +53,48 @@ Page {
             text: qsTr("Choose your Photo")
             Layout.columnSpan: 1
             Layout.fillWidth: true
+            onClicked: {
+                fileDialog.open();
+            }
+        }
+        FileDialog {
+            id: fileDialog
+            title: qsTr("Please choose an image file");
+            folder: shortcuts.desktop
+            selectExisting: true
+            selectFolder: false
+            selectMultiple: false
+            nameFilters: ["Image Files (*.jpg *.png *.gif)",
+                "Bitmap File (*.bmp)", "* (*.*)"];
+            selectedNameFilter: "Image Files (*.jpg *.png *.gif)";
+            onAccepted: {
+                img_source.source = fileDialog.fileUrl;
+                console.log("You chose: " + fileDialog.fileUrl);
+            }
         }
         Button {
             id: btn_target
             text: qsTr("Choose her Photo")
             Layout.columnSpan: 1
             Layout.fillWidth: true
+            onClicked: {
+                fileDialog_her.open();
+            }
+        }
+        FileDialog {
+            id: fileDialog_her
+            title: qsTr("Please choose an image file");
+            folder: shortcuts.desktop
+            selectExisting: true
+            selectFolder: false
+            selectMultiple: false
+            nameFilters: ["Image Files (*.jpg *.png *.gif)",
+                "Bitmap File (*.bmp)", "* (*.*)"];
+            selectedNameFilter: "Image Files (*.jpg *.png *.gif)";
+            onAccepted: {
+                img_target.source = fileDialog_her.fileUrl;
+                console.log("You chose: " + fileDialog_her.fileUrl);
+            }
         }
         Button {
             id: btn_compare
