@@ -31,7 +31,6 @@ Page {
                 border.color: "green"
                 Image {
                     id: img_source
-                    source: "source.png"
                 }
             }
             Button {

@@ -26,7 +26,6 @@ Page {
             border.color: "green"
             Image {
                 id: img_source
-                source: "source.png"
             }
         }
         Rectangle {
@@ -36,7 +35,6 @@ Page {
             border.color: "red"
             Image {
                 id: img_target
-                source: "target.png"
             }
         }
         Button {
